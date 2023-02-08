@@ -1,3 +1,17 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.6"
+    }
+  }
+}
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+
 module "dev" {
   source  = "app.terraform.io/acmecorpinfra/waypoint-ecs/aws"
   version = "0.0.1"
