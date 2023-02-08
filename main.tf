@@ -24,7 +24,7 @@ module "dev" {
 
   # Module config
   alb_internal = true
-  create_ecr   = true
+  create_ecr   = false # Prod creates the ecr registry
 
   # Existing infrastructure
   aws_region       = "us-east-1"
@@ -55,7 +55,7 @@ module "prod" {
 
   # Module config
   alb_internal = false
-  create_ecr   = false # already created in dev
+  create_ecr   = true
 
   # Existing infrastructure
   aws_region       = "us-east-1"
