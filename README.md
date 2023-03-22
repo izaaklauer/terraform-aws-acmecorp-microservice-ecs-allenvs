@@ -28,7 +28,7 @@ app "<YOUR_APP_NAME>" {
     registry {
       use "aws-ecr" {
         region     = "us-east-1"
-        repository = var.ecr_registry
+        repository = var.tfc_infra.prod.ecr_registry
         tag        = gitrefpretty()
       }
     }
